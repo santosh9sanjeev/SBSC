@@ -135,8 +135,8 @@ def get_speech_command():
             print('say anything:')
             r.adjust_for_ambient_noise(source,duration=0.0001)
             audio = r.listen(source,2)
-            print("System Predicts:"+r.recognize_google(audio))
-            text = r.recognize_google(audio)
+            print("System Predicts:"+r.recognize_sphinx(audio))
+            text = r.recognize_sphinx(audio)
             print('you said : {}',format(text))
             return text
         except Exception:
